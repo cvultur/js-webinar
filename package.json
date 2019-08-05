@@ -1,0 +1,29 @@
+{
+  "name": "js-webinar",
+  "version": "1.0.0",
+  "description": "Tasks for JS webinar",
+  "scripts": {
+    "test:module-1": "mocha module-1/test/*.spec.js",
+    "test:module-2": "mocha module-2/test/*.spec.js",
+    "test:module-3": "mocha module-3/test/*.spec.js",
+    "test:module-4": "mocha module-4/test/*.spec.js",
+    "test:module-5": "cucumber-js module-5/features/EPAM.feature --require module-5/step_definitions/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szikszail/js-webinar.git"
+  },
+  "author": "Laszlo Szikszai <Laszlo_Szikszai@epam.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/szikszail/js-webinar/issues"
+  },
+  "homepage": "https://github.com/szikszail/js-webinar#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "cucumber": "^5.1.0",
+    "jasmine": "^3.4.0",
+    "mocha": "^6.2.0",
+    "sinon": "^7.3.2"
+  }
+}
