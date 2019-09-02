@@ -23,7 +23,7 @@ function grade(score) {
      * Also take into consideration the documentation of the function!
      */
     // PLACE YOUR CODE BETWEEN THIS...
-
+    gradeOfStudent = typeof score != 'number' || score < 0 || score > 100 ? 0 : Math.min(Math.max(parseInt((score - 40)/10), 1), 5);
     // ...AND THIS COMMENT LINE!
     return gradeOfStudent;
 }
