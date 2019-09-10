@@ -2,6 +2,8 @@
 
 const ElementFinder = require('./mock/ElementFinder');
 const Browser = require('./mock/Browser');
+//  ReferenceError: Element is not defined at Context.it (module-3\test\Layout.spec.js:71:27)
+const Element = require('../Element');
 const Layout = require('../Layout');
 const expect = require('chai').expect;
 
