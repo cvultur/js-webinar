@@ -12,3 +12,28 @@
  * @returns {boolean} true if the two arrays are equal,
  *                    false otherwise
  */
+
+function arrayEqual(first, second) {
+    if (first.length != second.length) {
+        console.warn(`Size is different. First: ${first.length} != Second: ${second.length}`);
+        return false;
+    } else {
+        let equal = true;
+        for (let i = 0; i < first.length; i++) {
+            if (Array.isArray(first[i])) {
+                if (Array.isArray(second[i])) {
+                    equal = arrayEqual(first[i], second[i]);
+                } else {
+                    console.warn(first[i] + " != " + second[i]);
+                    return false;
+                }
+            } else if (first[i] !== second[i]) {
+                console.warn(first[i] + " != " + second[i]);
+                return false;
+            }
+        }
+        return equal;
+    }
+}
+
+module.exports = arrayEqual;

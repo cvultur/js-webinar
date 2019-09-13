@@ -7,3 +7,12 @@
  * @param {Array.<string>} strings
  * @returns {string} longest string or empty string in other cases
  */
+function longestString(strings) {
+    if (!Array.isArray(strings)) {
+        return "";
+    }
+    return strings.sort()
+        .sort((a, b) => (typeof a !== "string" && typeof b !== "string") ? 1 : b.length - a.length)[0];
+}
+
+module.exports = longestString;
